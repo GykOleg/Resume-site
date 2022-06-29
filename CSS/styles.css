@@ -309,8 +309,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .open-box {
-  -webkit-transform: translate(0, -350px) rotateX(45deg);
-          transform: translate(0, -350px) rotateX(45deg);
+  -webkit-transform: translate(0, -320px) rotateX(45deg);
+          transform: translate(0, -320px) rotateX(45deg);
   -webkit-perspective: 400px;
           perspective: 400px;
   -webkit-transition: all 700ms;
