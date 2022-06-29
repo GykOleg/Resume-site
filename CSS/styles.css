@@ -255,7 +255,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .skills-tech__body {
-  height: 800px;
+  height: 750px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -267,7 +267,7 @@ h1, h2, h3, h4, h5, h6 {
   border-bottom: 65px solid #3d2c18;
 }
 
-.skills__cover {
+.box__cover {
   position: relative;
   height: 250px;
   width: 350px;
@@ -281,40 +281,22 @@ h1, h2, h3, h4, h5, h6 {
   text-shadow: 0 6px 2px #332d26;
   color: #bb9a3e;
   z-index: 2;
+  top: 200px;
+  -webkit-transition: all 700ms;
+  transition: all 700ms;
 }
 
-.skills__box {
+.box__text {
   position: relative;
-  top: -180px;
-  height: 250px;
-  width: 350px;
-  border-radius: 25%;
-  background-color: #614525;
-  -webkit-box-shadow: 0 65px #3d2c18;
-          box-shadow: 0 65px #3d2c18;
-  border: 15px solid #3d2c18;
-  z-index: 0;
-}
-
-.tech__cover {
-  position: relative;
-  height: 250px;
-  width: 350px;
-  border-radius: 25%;
-  background-color: #614525;
-  -webkit-box-shadow: 0 65px #3d2c18;
-          box-shadow: 0 65px #3d2c18;
   text-align: center;
-  padding: 85px 0 0 0;
-  font-weight: 700;
-  text-shadow: 0 6px 2px #332d26;
+  z-index: 1;
+  line-height: 35px;
   color: #bb9a3e;
-  z-index: 2;
+  top: 15px;
 }
 
-.tech__box {
+.box__box {
   position: relative;
-  top: -180px;
   height: 250px;
   width: 350px;
   border-radius: 25%;
@@ -323,24 +305,16 @@ h1, h2, h3, h4, h5, h6 {
           box-shadow: 0 65px #3d2c18;
   border: 15px solid #3d2c18;
   z-index: 0;
+  top: -200px;
 }
 
 .open-box {
-  height: 100px;
-  border-radius: 21%;
-  padding: 20px 0 0 0;
-  text-shadow: 0 6px 2px #332d26;
-}
-
-.inbox {
-  position: relative;
-  text-align: center;
-  margin-top: 35px;
-  z-index: 1;
-  line-height: 25px;
-  color: #bb9a3e;
-  top: 46px;
-  display: none;
+  -webkit-transform: translate(0, -350px) rotateX(45deg);
+          transform: translate(0, -350px) rotateX(45deg);
+  -webkit-perspective: 400px;
+          perspective: 400px;
+  -webkit-transition: all 700ms;
+  transition: all 700ms;
 }
 
 .bage__body {
@@ -359,9 +333,12 @@ h1, h2, h3, h4, h5, h6 {
   height: 100%;
   width: 100%;
   z-index: 1;
-  visibility: hidden;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
 }
 
 .bage__bage {
@@ -380,6 +357,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .open {
   visibility: visible;
+  opacity: 1;
+  -webkit-transition: all 500ms;
+  transition: all 500ms;
 }
 
 .footer__body {
