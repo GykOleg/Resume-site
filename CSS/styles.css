@@ -451,4 +451,14 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 40px;
     color: #79642c;
   }
+
+  .box__cover {
+    height: 250px;
+    width: 300px;
+  }
+  .box__box {
+    height: 250px;
+    width: 300px;
+    top: -220px;
+  }
 }

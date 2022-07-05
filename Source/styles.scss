@@ -418,4 +418,15 @@ $headercolor: #bb9a3e;
          color: $fn-color;
       }
    }
+   .box{
+      &__cover{
+         height: 250px;
+         width: 300px;
+      }
+      &__box{
+         height: 250px;
+         width: 300px;
+         top: -220px;
+      }
+   }
 }
