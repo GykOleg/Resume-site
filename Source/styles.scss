@@ -8,6 +8,8 @@
 /*Styles*/
 //___________Variables___________
 $fn-sz: 30px;
+$fn-sz-medium: 25px;
+$fn-sz-small: 20px;
 $fn-color: #79642c;
 $mainColor: #252525;
 $secondColor: #fff;
@@ -105,7 +107,6 @@ $headercolor: #bb9a3e;
    }
 }
 .suit{
-   width: 100%;
    &__body{
       background: url('../IMG/suit.svg') 0 0/ cover no-repeat;
       background-position: center;
@@ -141,7 +142,7 @@ $headercolor: #bb9a3e;
 }
 .skills-tech{
    &__body{
-      height: 750px;
+      height: 100%;
       display: flex;
       align-items: center;
       justify-content: space-around;
@@ -150,6 +151,7 @@ $headercolor: #bb9a3e;
 }
 
 .box{
+   cursor: pointer;
    &__cover{
       position: relative;
       height: 250px;
@@ -233,4 +235,93 @@ $headercolor: #bb9a3e;
       height: 120px;
       border-top: 10px solid #3d2c18;
    }
+}
+
+@media screen and (max-width: 1024px) {
+   
+}
+
+@media screen and (max-width: 640px) {
+   .body{
+      font-size: $fn-sz-small;
+   }
+   .header{
+      &__cylynder{
+         width: 80%;
+         height: 400px;
+      }
+      &__logo{
+         font-size: 120px;
+         font-weight: 600;
+         border: 12px solid $headercolor;
+         padding: 15px;
+      }
+   }
+   .nav{
+      &__body{
+         font-size: 30px;
+         padding: 20px 30px 20px 30px;
+      }
+      &__logo{
+         font-size: 40px;
+      }
+      &__items{
+         display: none;
+      }
+   }
+   .content{
+      &__body{
+         line-height: 40px;
+      }
+   }
+   .about-me{
+      &__body{
+         padding: 20px;
+      }
+      &__tittle{
+         font-size: 42px;
+         margin: 80px 0 50px;
+      }
+      &__text{
+         width: 60%;
+      }
+   }
+   .suit{
+      &__body{
+         background: url('../IMG/suitPhone.svg') 0 0/ cover no-repeat;
+         background-position: center;
+         height: 800px;
+      }
+      &__block{
+         width: 50%;
+         display: flex;
+         align-items: flex-end;
+         justify-content: center;
+         padding: 0 25px 120px 0;
+      }
+      &__bage{
+         background-image: none;
+         background-color: #353535;
+         color: #646363;
+         font-size: 35px;
+         width: 250px;
+         padding: 25px;
+         &:hover{
+            background-color: #353535;
+            color: #858484;
+            font-size: 40px;
+            width: 350px;
+            padding: 30px;
+         }
+      }
+   }
+   .skills-tech{
+      &__body{
+         flex-direction: column;
+         justify-content: space-between;
+      }
+   }
+}
+
+@media (max-width: 320px) {
 }
