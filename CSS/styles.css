@@ -198,55 +198,64 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .skills-tech__body {
-  height: 100%;
+  height: 600px;
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   border-bottom: 65px solid #3d2c18;
+  padding-top: 65px;
 }
 
-.box {
-  cursor: pointer;
+.box__body {
+  transition: all 700ms;
+  line-height: 1px;
 }
 .box__cover {
+  cursor: pointer;
   position: relative;
-  height: 250px;
-  width: 350px;
+  height: 320px;
+  width: 500px;
+  box-shadow: 0 65px #3d2c18;
+  text-shadow: 0 6px 2px #332d26;
   border-radius: 25%;
   background-color: #614525;
-  box-shadow: 0 65px #3d2c18;
+  padding: 120px 0 0 0;
   text-align: center;
-  padding: 85px 0 0 0;
-  font-weight: 700;
-  text-shadow: 0 6px 2px #332d26;
   color: #bb9a3e;
+  font-weight: 700;
   z-index: 2;
-  top: 200px;
   transition: all 700ms;
 }
 .box__text {
+  cursor: pointer;
   position: relative;
   text-align: center;
   z-index: 1;
-  line-height: 35px;
   color: #bb9a3e;
-  top: 15px;
 }
 .box__box {
   position: relative;
-  height: 250px;
-  width: 350px;
+  height: 320px;
+  width: 500px;
   border-radius: 25%;
   background-color: #614525;
   box-shadow: 0 65px #3d2c18;
   border: 15px solid #3d2c18;
   z-index: 0;
-  top: -200px;
+  top: -250px;
+  transition: all 700ms;
 }
 
-.open-box {
-  transform: translate(0, -320px) rotateX(45deg);
-  perspective: 400px;
+.open-cover {
+  transform: translate(0, -25px) rotateX(45deg);
+  perspective: 700px;
+  line-height: 15px;
+  transition: all 700ms;
+}
+
+.open-box-text {
+  transform: translate(0, -200px);
+  line-height: 35px;
   transition: all 700ms;
 }
 
@@ -259,7 +268,7 @@ h1, h2, h3, h4, h5, h6 {
   min-height: 100%;
   height: 100%;
   width: 100%;
-  z-index: 1;
+  z-index: 6;
   transition: all 0.3s ease 0s;
   visibility: hidden;
   opacity: 0;
@@ -270,11 +279,6 @@ h1, h2, h3, h4, h5, h6 {
   padding: 25px 95px;
   line-height: 55px;
   color: #79642c;
-}
-.bage__title {
-  text-align: center;
-  font-weight: 700;
-  margin-bottom: 15px;
 }
 
 .open {
@@ -359,8 +363,92 @@ h1, h2, h3, h4, h5, h6 {
     padding: 30px;
   }
 
-  .skills-tech__body {
-    flex-direction: column;
-    justify-content: space-between;
+  .box__cover {
+    height: 280px;
+    width: 400px;
+  }
+  .box__box {
+    height: 280px;
+    width: 400px;
+  }
+}
+@media screen and (max-width: 500px) {
+  .body {
+    font-size: 20px;
+  }
+
+  .header__cylynder {
+    width: 80%;
+    height: 300px;
+  }
+  .header__logo {
+    font-size: 120px;
+    font-weight: 600;
+    border: 12px solid #bb9a3e;
+    padding: 15px;
+  }
+
+  .nav__body {
+    font-size: 28px;
+    padding: 10px 30px 10px 30px;
+  }
+  .nav__logo {
+    font-size: 35px;
+  }
+  .nav__items {
+    display: none;
+  }
+
+  .content__body {
+    line-height: 37px;
+  }
+
+  .about-me__body {
+    padding: 20px;
+  }
+  .about-me__tittle {
+    font-size: 42px;
+    margin: 80px 0 50px;
+  }
+  .about-me__text {
+    width: 85%;
+  }
+
+  .suit__body {
+    background: url("../IMG/suitPhone.svg") 0 0/cover no-repeat;
+    background-position: center;
+    height: 700px;
+  }
+  .suit__block {
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 0 25px 100px 0;
+  }
+  .suit__bage {
+    background-image: none;
+    background-color: #353535;
+    color: #646363;
+    font-size: 35px;
+    width: 250px;
+    padding: 25px;
+  }
+  .suit__bage:hover {
+    background-color: #353535;
+    color: #858484;
+    font-size: 40px;
+    width: 350px;
+    padding: 30px;
+  }
+
+  .bage__body {
+    padding: 35px;
+  }
+  .bage__bage {
+    background-image: linear-gradient(270deg, #79642c 0%, #bb9a3e 22%, #bb9a3e 78%, #79642c 100%);
+    padding: 25px 55px;
+    line-height: 40px;
+    color: #79642c;
   }
 }
