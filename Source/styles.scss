@@ -17,7 +17,7 @@ $bgColor: #e5d7c2;
 $headercolor: #bb9a3e;
 //___________Classes___________
 .body{
-   font-size: $fn-sz;
+   font-size: $fn-sz-small;
    font-family: 'Source Serif Pro', serif;
    background-color: $bgColor;
 }
@@ -31,49 +31,53 @@ $headercolor: #bb9a3e;
    text-decoration: underline;
 }
 .header{
-   //&__body{}
+   &__cylynder-body{
+      padding: 0 6px;
+   }
    &__cylynder{
       background-color: $mainColor;
+      width: 85%;
+      height: 300px;
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 66%;
-      height: 900px;
       margin: 0 auto;
       box-shadow: inset 65px 0 25px -25px rgb(116, 116, 116) , inset -65px 0 25px -25px rgb(116, 116, 116);
    }
    &__logo{
-      font-size: 200px;
+      margin: 0 auto;
+      font-size: 100px;
       font-weight: 700;
       font-family: 'Source Serif Pro', serif;
       text-align: center;
       color: $headercolor;
-      border: 15px solid $headercolor;
+      border: 12px solid $headercolor;
       border-radius: 60%;
-      padding: 20px 35px 5px 35px;
+      padding: 12px 22px 5px 22px;
    }
 }
 .nav{
    &__body{
       background-color: $mainColor;
-      font-size: 38px;
+      font-size: $fn-sz;
       font-family: 'Dancing Script', cursive;
       color: $headercolor;
       display: flex;
       align-items: center;
       justify-content: space-between;
       width: 100%;
-      padding: 25px 45px 25px 45px;
+      padding: 18px 15px 18px 15px;
    }
    &__item{
-      margin: 0 25px 0 25px;
+      display: none;
+      margin: 0 10px 0 10px;
       cursor: pointer;
    }
    &__items{
       display: flex;
    }
    &__logo{
-      font-size: 45px;
+      font-size: 40px;
    }
 }
 .content{
@@ -81,7 +85,7 @@ $headercolor: #bb9a3e;
    color: $fn-color;
    text-shadow: 0 1px $mainColor;
    &__body{
-      line-height: 50px;
+      line-height: 35px;
    }
 }
 .about-me{
@@ -90,7 +94,7 @@ $headercolor: #bb9a3e;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 100px;
+      padding: 20px;
    }
    &__tittle{
       font-size: 48px;
@@ -98,7 +102,7 @@ $headercolor: #bb9a3e;
    }
    &__text{
       margin-bottom: 50px;
-      width: 50%;
+      width: 70%;
       text-align: justify;
    }
    &__link{
@@ -108,87 +112,84 @@ $headercolor: #bb9a3e;
 }
 .suit{
    &__body{
-      background: url('../IMG/suit.svg') 0 0/ cover no-repeat;
+      background: url('../IMG/suitPhone.svg') 0 0/ cover no-repeat;
       background-position: center;
       width: 100%;
-      height: 1400px;
+      height: 533px;
       display: flex;
-      flex-wrap: wrap;
    }
    &__block{
       width: 50%;
+      height: 100%;
       display: flex;
-      align-items: center;
+      align-items: flex-end;
       justify-content: center;
+      padding-bottom: 105px;
    }
    &__bage{
-      background-image: linear-gradient(135deg, #79642c 4%, #bb9a3e 26%, #79642c 51%, #bb9a3e 74%, #79642c 100%);
-      font-size: 45px;
+      //background-image: linear-gradient(135deg, #79642c 4%, #bb9a3e 26%, #79642c 51%, #bb9a3e 74%, #79642c 100%);
+      background-color: #424242;
+      font-size: 30px;
       cursor: pointer;
-      width: 300px;
-      padding: 45px;
-      color: $headercolor;
+      width: 200px;
+      padding: 15px;
+      color: $mainColor;
       margin-left: 25%;
       text-align: center;
-      text-shadow: 1px 0 2px #79642c;
       transition: all 500ms;
       &:hover{
-         background-color: $headercolor;
-         font-size: 47px;
-         width: 320px;
-         padding: 48px;
+         color: $secondColor;
+         font-size: 35px;
+         width: 230px;
+         padding: 20px;
       }
    }
 }
-.skills-tech{
-   &__body{
-      height: 600px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-bottom: 65px solid #3d2c18;
-      padding-top: 65px;
-   }
-}
 .box{
+   &__backgr{
+      width: 100%;
+      height: 500px;
+      padding: 10%;
+   }
    &__body{
-      transition: all 700ms;
       line-height: 1px;
+      transition: all 500ms;
    }
    &__cover{
       cursor: pointer;
       position: relative;
-      height: 320px;
-      width: 500px;
+      margin: 0 auto;
+      height: 200px;
       box-shadow: 0 65px #3d2c18;
       text-shadow: 0 6px 2px #332d26;
       border-radius: 25%;
       background-color: #614525;
-      padding: 120px 0 0 0;
       text-align: center;
       color: $headercolor;
       font-weight: 700;
       font-size: $fn-sz-medium;
+      padding-top: 100px;
       z-index: 2;
       transition: all 700ms;
    }
    &__text{
       cursor: pointer;
       position: relative;
+      margin: 0 auto;
       text-align: center;
       z-index: 1;
       color: #bb9a3e;
    }
    &__box{
       position: relative;
-      height: 320px;
-      width: 500px;
+      margin: 0 auto;
+      height: 200px;
       border-radius: 25%;
       background-color: #614525;
       box-shadow: 0 65px #3d2c18;
       border: 15px solid #3d2c18;
       z-index: 0;
-      top: -250px;
+      transform: translate( 0, -160px);
       transition: all 700ms;
    }
 }
@@ -222,10 +223,10 @@ $headercolor: #bb9a3e;
       transition: all 500ms;
    }
    &__bage{
-      background-image: linear-gradient(270deg, #79642c 0%, #bb9a3e 22%, #bb9a3e 78%, #79642c 100%);
-      padding: 25px 95px;
-      line-height: 55px;
-      color: $fn-color;
+      background-image: linear-gradient(135deg, #79642c 4%, #bb9a3e 26%, #79642c 51%, #bb9a3e 74%, #79642c 100%);
+      padding: 15px 15px;
+      line-height: 35px;
+      color: #7e5c01;
    }
 }
 
@@ -242,21 +243,95 @@ $headercolor: #bb9a3e;
       border-top: 10px solid #3d2c18;
    }
 }
-@media screen and (max-width: 1200px) {
-   .header{
-   &__cylynder{
-      width: 75%;
-      height: 600px;
+@media (min-width: 599px) { 
+   .nav{
+      &__item{
+         display: block;
+      }
+   }
+   .suit{
+      &__body{
+         background: url('../IMG/suitPhone.svg') 0 0/ cover no-repeat;
+         background-position: center;
+         width: 100%;
+         height: 700px;
+         padding-right: 15px;
+         display: flex;
+      }
+      &__bage{
+         padding: 25px;
+         font-size: 35px;
+         &:hover{
+            padding: 30px;
+            font-size: 40px;
+         }
+      }
+   }
+   .bage{
+      &__bage{
+         padding: 25px 65px;
+         line-height: 45px;
+         font-size: 25px;
+      }
+   }
+   .box{
+      &__cover{
+         height: 250px;
+      }
+      &__box{
+         height: 250px;
+         transform: translate( 0, -180px);
+      }
    }
 }
-}
-@media screen and (max-width: 1008px) {
-   
-}
-@media screen and (max-width: 767px) {
-   
-}
-@media screen and (max-width: 641px) {
-   
+@media (min-width: 767px){
+   .header{
+      &__cylynder{
+         height: 500px;
+      }
+      &__logo{
+         font-size: 130px;
+         border: 15px solid $headercolor;
+      }
+   }
+   .about-me{
+      &__text{
+         width: 60%;
+      }
+   }
+   .suit{
+      &__body{
+         height: 900px;
+         padding: 0 30px 50px 0;
+      }
+      &__bage{
+         font-size: 45px;
+         padding: 35px 25px;
+         width: 260px;
+         &:hover{
+            font-size: 45px;
+         padding: 40px 25px;
+         width: 280px;
+         }
+      }
+   }
+   .box{
+      &__backgr{
+         padding: 3% 20%;
+      }
+      &__cover{
+         height: 280px;
+      }
+      &__text{
+         font-size: $fn-sz;
+      }
+      &__box{
+         height: 280px;
+         transform: translate( 0, -220px);
+      }
+   }
+   .open-box-text{
+      transform: translate(0, -300px);
+   }
 }
 
