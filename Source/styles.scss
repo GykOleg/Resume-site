@@ -204,8 +204,6 @@ $headercolor: #bb9a3e;
    line-height: 35px;
    transition: all 700ms;
 }
-
-
 .bage{
    &__body{
       background-color: #444444f1;
@@ -229,13 +227,11 @@ $headercolor: #bb9a3e;
       color: #7e5c01;
    }
 }
-
 .open{
    visibility: visible;
    opacity: 1;
    transition: all 500ms;
 }
-
 .footer{
    &__body{
       background-color: #614525;
@@ -294,6 +290,11 @@ $headercolor: #bb9a3e;
          border: 15px solid $headercolor;
       }
    }
+   .nav{
+      &__body{
+         padding: 20px 30px;
+      }
+   }
    .about-me{
       &__text{
          width: 60%;
@@ -310,8 +311,8 @@ $headercolor: #bb9a3e;
          width: 260px;
          &:hover{
             font-size: 45px;
-         padding: 40px 25px;
-         width: 280px;
+            padding: 40px 25px;
+            width: 280px;
          }
       }
    }
@@ -334,4 +335,218 @@ $headercolor: #bb9a3e;
       transform: translate(0, -300px);
    }
 }
-
+@media (min-width: 1008px){
+   .header{
+      &__cylynder{
+         height: 690px;
+      }
+      &__logo{
+         font-size: 150px;
+         border: 17px solid $headercolor;
+      }
+   }
+   .nav{
+      &__body{
+         padding: 20px 30px;
+      }
+   }
+   .about-me{
+      &__text{
+         width: 40%;
+      }
+   }
+   .suit{
+      &__body{
+         background: url('../IMG/suit.svg') 0 0/ cover no-repeat;
+         background-position: center;
+         height: 900px;
+      }
+      &__block{
+         align-items: flex-end;
+         justify-content: flex-end;
+         padding-bottom: 50px;
+      }
+   }
+   .box{
+      &__backgr{
+         padding: 3% 28%;
+      }
+      &__cover{
+         height: 280px;
+         font-size: 40px;
+         padding-top: 120px;
+      }
+      &__text{
+         font-size: $fn-sz;
+      }
+      &__box{
+         height: 280px;
+         transform: translate( 0, -220px);
+      }
+   }
+}
+@media (min-width: 1270px){
+   .header{
+      &__cylynder{
+         width: 75%;
+         height: 715px;
+      }
+      &__logo{
+         font-size: 150px;
+         border: 17px solid $headercolor;
+      }
+   }
+   .about-me{
+      &__text{
+         width: 35%;
+      }
+   }
+   .suit{
+      &__body{
+         background: url('../IMG/suit.svg') 0 0/ cover no-repeat;
+         background-position: center;
+         height: 900px;
+      }
+      &__block{
+         align-items: center;
+         justify-content: flex-end;
+         padding-bottom: 50px;
+      }
+      &__bage{
+         background-image: linear-gradient(135deg, #79642c 4%, #bb9a3e 26%, #79642c 51%, #bb9a3e 74%, #79642c 100%);
+         color: #b68d1b;
+         padding: 45px 80px;
+         &:hover{
+            color: #b68d1b;
+            font-size: 50px;
+            padding: 50px 85px;
+            width: 280px;
+         }
+      }
+   }
+   .box{
+      &__backgr{
+         padding: 3% 32%;
+      }
+      &__cover{
+         height: 280px;
+         font-size: 40px;
+         padding-top: 120px;
+      }
+      &__text{
+         font-size: $fn-sz;
+      }
+      &__box{
+         height: 280px;
+         transform: translate( 0, -220px);
+      }
+   }
+}
+@media (min-width: 1439px){
+   .header{
+      &__cylynder{
+         width: 75%;
+         height: 900px;
+      }
+   }
+   .about-me{
+      &__text{
+         width: 400px;
+      }
+   }
+   .suit{
+      &__block{
+         padding-right: 5%;
+      }
+   }
+   .box{
+      &__backgr{
+         padding: 3% 35%;
+      }
+      &__box{
+         height: 280px;
+         transform: translate( 0, -240px);
+      }
+   }
+}
+@media (min-width: 1919px){
+   .header{
+      &__cylynder{
+         width: 75%;
+         height: 1080px;
+      }
+      &__logo{
+         font-size: 200px;
+      }
+   }
+   .nav{
+      font-size: 50px;
+   }
+   .about-me{
+      &__body{
+         padding: 80px;
+         line-height: 55px;
+         font-size: 30px;
+      }
+      &__tittle{
+         font-size: 55px;
+         margin: 50px 0 80px;
+      }
+      &__text{
+         width: 400px;
+         margin-bottom: 50px;
+      }
+      &__link{
+         margin-bottom: 80px;
+      }
+   }
+   .suit{
+      &__body{
+         height: 1440px;
+      }
+      &__block{
+         padding-right: 5%;
+      }
+      &__bage{
+         font-size: 55px;
+         padding: 50px 85px;
+         &:hover{
+            color: #b68d1b;
+            font-size: 60px;
+            padding: 55px 90px;
+         }
+      }
+   }
+   .box{
+      &__backgr{
+         padding: 3% 35%;
+         height: 700px;
+      }
+      &__cover{
+         height: 320px;
+         width: 480px;
+         padding-top: 150px;
+      }
+      &__box{
+         height: 320px;
+         width: 480px;
+         transform: translate( 0, -250px);
+      }
+   }
+}
+@media (min-width: 2000px){
+   .wrapper{
+      width: 1920px;
+      margin: 0 auto;
+   }
+   .box{
+      &__text{
+         font-size: 45px;
+      }
+   }
+   .open-box-text{
+      transform: translate(0, -360px);
+      line-height: 45px;
+      transition: all 700ms;
+   }
+}
